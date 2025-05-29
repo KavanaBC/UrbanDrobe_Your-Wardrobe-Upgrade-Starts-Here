@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# UrbanDrobe-Your Wardrobe Upgrade Starts Here!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a modern e-commerce frontend application built with **React** and **Redux Toolkit** for state management. The app allows users to browse products, add or remove items from the cart, and proceed through a checkout process with a billing form. It also includes a simple contact page.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Live Demo
 
-### `npm start`
+[Click Here](https://urban-drobe-your-wardrobe-upgrade-s.vercel.app/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- **Product Listing**: Display of products with add-to-cart functionality.
+- **Shopping Cart**: Add items to the cart, update quantities, or remove items.
+- **Cart Persistence**: Cart state is saved and loaded from `localStorage` to persist user choices across sessions.
+- **Checkout Page**: Shows order summary, billing address form, and payment form (form submission disabled).
+- **Contact Page**: Basic contact form (submission disabled).
+- **Redux Toolkit**: Used for managing cart state efficiently.
+- **React Router**: For navigation between Home, Checkout, and Contact pages.
+- **Bootstrap & Custom Styling**: Responsive UI with Bootstrap classes and custom styles.
+- **Navbar & Footer**: Shared components across all pages.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Project Structure
+```bash
+- `/components` – Reusable components like `Navbar`, `Footer`, `Main`, and `Product`.
+- `/pages` – Main pages including `Home.js`, `Checkout.js`, and `ContactPage.js`.
+- `/redux` – Redux setup including reducers (`handleCart`), root reducer, and store configuration.
+- `/App.js` – App routing and page rendering.
+- `/fakeAPI.js` (conceptual) – Used as a mock API or simulated backend for product data during development (highlighted below).
+```
+----
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Key Highlights
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1. **Redux Cart Reducer (`handleCart`)**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Adds items to cart, increments quantity if the item exists.
+- Deletes or decrements item quantity.
+- Saves updated cart to `localStorage` for persistence.
+- Handles empty cart scenario gracefully.
 
-### `npm run eject`
+### 2. **Checkout Page**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Displays order summary with total price and shipping.
+- Billing address form with validation UI (but submission is disabled for now).
+- Payment details form (submission disabled).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 3. **fakeAPI (Mock API Concept)**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+> **Note:** The project uses a **fakeAPI** or mock API to simulate backend calls and product data during development. This approach allows frontend development and testing without a real backend service.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Typically, `fakeAPI` is a JS module or JSON file exporting product data arrays.
+- Can be extended to simulate async calls using `setTimeout` or Promises.
+- Useful for prototyping UI and Redux store integration before real API integration.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Installation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+git clone https://github.com/KavanaBC/UrbanDrobe_Your-Wardrobe-Upgrade-Starts-Here.git
+cd urbandrobe
+npm install
+npm start
+```
+---

@@ -68,3 +68,5 @@ npm install
 npm start
 ```
 ---
+## Author
+Kavana B C
